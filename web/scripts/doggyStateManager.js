@@ -164,23 +164,23 @@ function doggyFoodNeedController()
 }
 
 
-
 document.getElementById("doggyImage").onclick = doggyHasFun
-
 
 
 const DOGGY_FUN_NEED_INTERVAL = ( 60 * 60 * 1000)
 
 setInterval(()=>{
+    const DOGGY_FUN_REDUCTION_PER_H = 25
+
     if( (!['IDLE_FUN','FUN_FUN'].includes(doggy.state)) && doggy.fun > 0){
         console.log(doggy.state)
-        doggy.fun -= 5;
+        doggy.fun -= DOGGY_FUN_REDUCTION_PER_H;
     }
     document.getElementById("funLevel").innerHTML = doggy.fun + "%"
 }, DOGGY_FUN_NEED_INTERVAL);
 
 
-const DOGGY_POOP_NEED_INTERVAL = (5 * 1 * 1000)
+const DOGGY_POOP_NEED_INTERVAL = (60 * 60 * 1000)
 
 function doggyPoopNeedController(){
 
