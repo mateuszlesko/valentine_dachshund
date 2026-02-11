@@ -1,0 +1,82 @@
+<html><head>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+</head>
+<body onload="window.onload = changeDogImage('IDLE');main()" style="
+    margin: 0px;max-width: 100%;
+">
+    <div class="topbar">
+        <div class="nametag_outside">
+            <div class="nametag_inside">
+                <h1 id="doggyName"></h1>
+            </div>
+        </div>
+        <div style="display: table;margin-top: 40px;width: 400px;height: 60px;background-color: honeydew;margin-left: auto;margin-right: auto; border:solid; border-radius: 10%;">
+            <div style="width: 100%;display: table-row;">
+                <div style="display: table-cell; width:100%;">
+                    <div style="width: auto;margin-left: 40px;display: inline-block;margin-right: 40px;position: relative;">
+                        <span class="needLabel">ENERGY</span>
+                        <span id="energyLevel"></span>
+                    </div>
+                    <div style="width: auto;margin-left: 40px;display: inline-block;margin-right: 40px;position: relative;">
+                        <span>FOOD</span>
+                        <span id="foodLevel"></span>
+                    </div>
+                    <div style="width: auto;margin-left: 40px;display: inline-block;margin-right: 40px;position: relative;">
+                        <span>FUN</span>
+                        <span id="funLevel"></span>
+                    </div>
+                    <div style="width: auto;margin-left: 40px;display: inline-block;margin-right: 40px;position: relative;;">
+                        <span>POOP</span>
+                        <span id="poopLevel"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" onclick="overlayOff()">
+        <div id="sleepcounter"></div>
+    </div>
+    <div id="doggyspace" class="doggyspace" style="width: 100%;margin: auto;">
+            <div class="doggyspace" style="
+        width: inherit;
+        margin: inherit;
+        display: block;
+    ">
+        <img id="doggyImage" src="../imgs/DOGGY_IDLE.png" style="
+        margin: inherit;
+        display: block;
+    ">
+        </div>
+    </div>
+    <div class="bottombar" style="max-width: 100%;margin: auto;">
+        <div class="table">
+            <div style="display: table-row;">
+                <div style="display: table-cell; margin: auto; width: inherit;">
+                    <div style="display: inline-block;">
+                        <button onclick="doggySleeps()" class="button">GO SLEEP</button>
+                    </div>
+                    <div style="display: inline-block;" >
+                        <button onclick="doggyEats()" class="button">GIVE SNACK</button>
+                    </div>
+                    <div style="display: inline-block;">
+                        <button class="button">HAVE FUN</button>
+                    </div>
+                    <div style="display: inline-block;">
+                     <!-- <button onclick="changeDogImage('WALK')" class="button"> GO WALK</button> -->
+                    <button onclick="doggyWalk()" class="button"> GO WALK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../../scripts/main.js"></script>
+<script src="../../scripts/utils.js"></script>
+<script src="../../scripts/displayManager.js"></script>
+<script src="../../scripts/doggyStateManager.js"></script>
+<script src="../../scripts/cookieManager.js"></script>
+<script src="../../scripts/notificationManager.js"></script>
+</body></html>
